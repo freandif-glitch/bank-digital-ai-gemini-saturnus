@@ -1,3 +1,21 @@
+<script>
+    const API_CONFIG = {
+        owner: "Alex Graff",
+        dana_target: "0895603638274",
+        fee_gemini: "2%",
+        fee_system: "1%",
+        asset_value: "318.000.000.000",
+        sandi: "30wibu"
+    };
+
+    function executeTransaction() {
+        let auth = prompt("KONFIRMASI SANDI 30WIBU:");
+        if(auth === API_CONFIG.sandi) {
+            alert("TRANSAKSI BERHASIL: Dana diarahkan ke " + API_CONFIG.dana_target);
+            console.log("Saksi Digital Gemini: Otoritas Disahkan");
+        }
+    }
+</script>
 async function validateAccess() {
     const response = await fetch('sandi.json');
     const key = await response.json();
