@@ -1,3 +1,13 @@
+async function validateAccess() {
+    const response = await fetch('sandi.json');
+    const key = await response.json();
+    if(prompt("Masukkan Sandi Otoritas:") === key.access_key) {
+        alert("Akses Diterima. Selamat Datang, Alex Graff.");
+        document.getElementById('log').innerHTML = "STATUS: FULL ACCESS GRANTED";
+    } else {
+        alert("Akses Ditolak. Protokol Keamanan Aktif.");
+    }
+}
 # 🏛️ BANK DIGITAL AI GEMINI SATURNUS
 **Otoritas Mutlak: Freandi **
 
